@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>All Products - Hyacinth</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="icon" type="image/png" href="img/hya.jpeg">
+
+
+<style>
+  .product-card {
+      border: 3px solid #83b17c;
+      border-radius:20px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+   .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+ .product-card img {
+  width: 70%;       /* حجم الصورة */
+  height: 150px;
+  object-fit: cover;
+  display: block;   /* مهم عشان margin:auto يشتغل */
+  margin: 0 auto;   /* يصطف في النص */
+}
+
+.product-card-body { padding:10px; }
+.product-title { font-weight:600; margin-bottom:10px; }
+.product-price { color:#105703; font-size:1.2rem; font-weight:500; }
+</style>
+
+ <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+       <!-- Libraries Stylesheet -->
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+
+</head>
+<body>
+
+  <!-- Top Navbar start -->
+        <div class="container-fluid fixed-top">
+            <div class="container topbar bg-primary d-none d-lg-block">
+                <div class="d-flex justify-content-between">
+                    <div class="top-info ps-2">
+                        <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-icon fa-lg"></i> 
+                            <a href="https://www.facebook.com/rctws.org" target="_blank" class="text-white fs">RCTWS - المركز الاقليمي للتدريب و الدراسات المائية</a>
+                        </small>
+                        <small class="me-3"><i class="fas fa-envelope me-2   fa-lg text-icon"></i>
+                            <a href="#" class="text-white fs">info@rctws.gov.eg</a>
+                        </small>
+                        <small class="me-3"><i class="fab fa-whatsapp me-2 text-icon fa-lg"></i>
+                            <a href="#" class="text-white fs">01000258841</a>
+                        </small>
+                    </div>
+                    <div class="top-link pe-2">
+                       <img src="./img/paacwa-removebg-preview.png" width="80px">
+                        <img src="./img/rc.png" width="180px" height="130px">
+
+                       <img src="./img/logo4.png" width="90px">
+ 
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="container px-0">
+                <nav class="navbar navbar-light bg-white navbar-expand-xl">
+
+
+<a href="https://www.facebook.com/rctws.org" target="_blank">
+  <img src="./img/hyac.png" style="height: 120px; width: 120px; cursor: pointer;">
+</a>
+
+
+
+                    <a href="https://www.facebook.com/rctws.org" target="_blank" class="navbar-brand"><h1 class="text-primary display-6">Hyacinth- ورد النيل</h1></a>
+                    <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars text-primary"></span>
+                    </button>
+                    <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+                        <div class="navbar-nav mx-auto">
+                            <a href="index.html" class="nav-item nav-link active fw-bold" data-ar="الرئيسية" data-en="Home">Home     </a>
+                            <a href="history.html" class="nav-item nav-link  fw-bold" data-ar="التاريخ" data-en="History"> History</a>
+                            <a href="cart.html" class="nav-item nav-link fw-bold" data-ar="العربة" data-en="Cart"></a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle fw-bold" data-bs-toggle="dropdown" data-ar="المنتجات "data-en="Products"></a>
+                                <div class="dropdown-menu m-0 bg-secondary rounded-0">
+                                    <a href="all-products.html" class="dropdown-item  fw-bold" data-ar="كل المنتجات" data-en="All products"> - </a>
+                                    <a href="https://forms.gle/xGgBKrQKAGeYq6rEA" class="dropdown-item fw-bold" data-ar="بيع منتجك" data-en="Sell at Hyacinth"> </a></div>
+                                </div> 
+                                     <a href="contact.html" class="nav-item nav-link fw-bold" data-ar="تواصل معنا" data-en="Contact" ></a>
+                                    <a href="https://forms.gle/xGgBKrQKAGeYq6rEA" class="nav-item nav-link fw-bold" data-ar=" بيع منتجك" data-en="Sell at Hyacinth"></a>
+
+                            </div> 
+
+      <div class="d-flex m-3 me-0">
+
+                          <a href="cart.html" class="position-relative me-4 my-auto">
+                                <i class="fa fa-shopping-bag fa-2x"></i>
+                                <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
+                            </a>
+                            <a href="https://forms.gle/xGgBKrQKAGeYq6rEA" class="my-auto">
+                                <i class="fas fa-user fa-2x"></i>
+                            </a>
+
+                            
+        <button onclick="setLanguage('ar')" class="btn btn-sm btn-outline-primary me-2">عربي</button>
+<button onclick="setLanguage('en')" class="btn btn-sm btn-outline-primary">EN</button>  
+                        </div>
+
+
+
+
+
+                        </div>
+                        
+                  
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- top Navbar End -->
+<div style="height:220px;"></div> <!-- Spacer -->
+
+
+<div style="height:90px;"></div>
+<ul class="nav nav-tabs mb-4 justify-content-center" id="productTabs">
+  <li class="nav-item"><button class="nav-link active bg-primary text-light" data-category="All">الكل</button></li>
+  <li class="nav-item"><button class="nav-link bg-primary text-light" data-category="باسكت">باسكت</button></li>
+  <li class="nav-item"><button class="nav-link bg-primary text-light" data-category="أطباق"> أطباق</button></li>
+    <li class="nav-item"><button class="nav-link bg-primary text-light" data-category="وحدات اضاءة">وحدات اضاءة</button></li>
+  <li class="nav-item"><button class="nav-link bg-primary text-light" data-category="أثاث"> أثاث </button></li>
+  <li class="nav-item"><button class="nav-link bg-primary text-light" data-category="ديكور"> ديكور </button></li>
+  <li class="nav-item"><button class="nav-link bg-primary text-light" data-category="شنط"> شنط </button></li>
+  <li class="nav-item"><button class="nav-link bg-primary text-light" data-category="منظم"> منظم </button></li>
+</ul>
+
+<div class="container py-4">
+  <div class="row" id="productsGrid"></div>
+</div>
+
+
+  <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
+            <div class="container py-5">
+                <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(226, 24, 24, 0.5) ;">
+                    <div class="row g-4">
+                        <div class="col-lg-3">
+                            <a href="#">
+                                <h1 class="text-primary mb-0">Hyacinth</h1>
+                                <p class="text-light mb-0">Handmade products</p>
+                            </a>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="position-relative mx-auto">
+                                <input class="form-control border-0 w-100 py-3 px-4 rounded-pill" type="number" placeholder="Your Email">
+                                <button type="submit" class="btn btn-primary border-0 border-secondary py-3 px-4 position-absolute rounded-pill text-white" style="top: 0; right: 0;">Subscribe Now</button>
+                            </div>
+                        </div>
+                       <div class="d-flex justify-content-end pt-3">
+                                 <a class="btn bg-primary btn-outline-secondary me-2 btn-md-square rounded-circle" href="https://www.facebook.com/profile.php?id=61572803608037"><i class="fab fa-facebook-f"></i></a>
+
+                                <a class="btn bg-primary btn-outline-secondary me-2 btn-md-square rounded-circle" href="https://www.instagram.com/regional_trainingcenter?fbclid=IwY2xjawO_u8lleHRuA2FlbQIxMABicmlkETFCOFN6UWk1bWhQUmtodGVxc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHubh2DN4yfxguJNljyhncz_wlaywmuAhNGKgFguYbPrltJeh7nC6CsIz_d_c_aem_ebj-E-huuBiDg3Vx98Fncg"><i class="fab fa-instagram"></i></a>
+                                <a class="btn bg-primary btn-outline-secondary me-2 btn-md-square rounded-circle" href="https://www.facebook.com/profile.php?id=61572803608037"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn bg-primary btn-outline-secondary btn-md-square rounded-circle" href="https://www.linkedin.com/company/106044133/admin/dashboard/"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                    </div>
+                </div>
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="text-light mb-3">Why People Like us!</h4>
+                            <p class="mb-4">Handcrafted with Love: Every piece is carefully handmade from fresh Nile roses, giving each product a unique touch.
+Natural & Authentic: We use only real Nile roses, ensuring natural fragrance and lasting quality.
+Perfect for Gifting: Beautifully crafted, our products make memorable gifts for any occasion.
+Satisfaction Guaranteed: Customers love our dedication to quality and craftsmanship.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="d-flex flex-column text-start footer-item">
+                            <h4 class="text-light mb-3">Shop Info</h4>
+                            <a class="btn-link" href="">About Us</a>
+                            <a class="btn-link" href="contact.html">Contact Us</a>
+                            <a class="btn-link" href="">Privacy Policy</a>
+                            <a class="btn-link" href="">Terms & Condition</a>
+                            <a class="btn-link" href="">Return Policy</a>
+                            <a class="btn-link" href="">FAQs & Help</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="d-flex flex-column text-start footer-item">
+                            <h4 class="text-light mb-3">Account</h4>
+                            <a class="btn-link" href="cart.html">My Account</a>
+                            <a class="btn-link" href="cart.html">Shopping Cart</a>
+                            <a class="btn-link" href="cart.html">Wishlist</a>
+                            <a class="btn-link" href="cart.html">Order History</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="text-light mb-3">Contact</h4>
+                            <p>Address: 6th october , Egypt</p>
+                            <p>Email: info@rctws.gov.eg</p>
+                            <p>Whats app: +20 100 025 8841</p>
+                            <p>Cash On Delivery</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid bg-dark text-white mt-5 py-4 text-center">
+  &copy; 2025 Hyacinth Handmade Products. All rights reserved.
+</div>
+        </div>
+        <!-- Footer End -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+const sheetURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTLA-G9iiewsgnvTuuF7yuyj5DJ9Z6ovVxu6i2h3Se5U-w75zgrZIiinLpT5FRUPk80SSUBqM7drwAR/pub?output=tsv";
+
+let allProducts = [];
+
+async function loadProducts() {
+  const res = await fetch(sheetURL);
+  const text = await res.text();
+  const rows = text.trim().split("\n");
+  const headers = rows[0].split("\t");
+
+  allProducts = rows.slice(1).map(row => {
+    const cols = row.split("\t");
+    let p = {};
+    headers.forEach((h, i) => p[h] = cols[i] || "");
+    p.spec = p.specification;
+
+    return p;
+  }).filter(p => p.name && p.image);
+
+  displayProducts("All");
+}
+
+function displayProducts(category) {
+  const grid = document.getElementById("productsGrid");
+  grid.innerHTML = "";
+
+  allProducts.forEach(product => {
+    if (category !== "All" && product.category !== category) return;
+
+    const col = document.createElement("div");
+    col.className = "col-md-4 mb-4";
+
+    col.innerHTML = `
+      <div class="product-card"
+        onclick="openProduct(
+          '${encodeURIComponent(product.image)}',
+          '${encodeURIComponent(product.name)}',
+          '${encodeURIComponent(product.code)}',
+          '${encodeURIComponent(product.price)}',
+          '${encodeURIComponent(product.spec)}'
+        )">
+
+        <img src="${product.image}" alt="${product.name}">
+        <div class="product-card-body">
+          <div class="product-title">${product.name}</div>
+          <div class="product-price">${product.price} EGP</div>
+        </div>
+      </div>
+    `;
+
+    grid.appendChild(col);
+  });
+}
+
+function openProduct(img, name, code, price, spec) {
+  window.location.href =
+    `products.html?img=${img}&name=${name}&code=${code}&price=${price}&spec=${spec}`;
+}
+
+// Tabs
+document.querySelectorAll("#productTabs button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll("#productTabs button").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    displayProducts(btn.dataset.category);
+  });
+});
+
+loadProducts();
+</script>
+
+<script>
+  function setLanguage(lang) {
+    localStorage.setItem('lang', lang); // تخزين اختيار اللغة
+    document.querySelectorAll('[data-ar]').forEach(el => {
+        el.textContent = (lang === 'ar') ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+    });
+    document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+}
+
+// عند تحميل الصفحة، طبق اللغة المخزنة
+document.addEventListener('DOMContentLoaded', () => {
+    const lang = localStorage.getItem('lang') || 'en';
+    setLanguage(lang);
+});
+
+</script>
+</body>
+</html>
